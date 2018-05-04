@@ -16,12 +16,6 @@
 
 task main()
 {
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
+	startMotor(leftMotor, 50);
+	
 }

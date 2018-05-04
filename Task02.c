@@ -16,12 +16,13 @@
 
 task main()
 {
+	setMotor(leftMotor, 50);
+	wait(2);
+	stopMotor(leftMotor);
+	setMotor(rightMotor, 50);
+	wait(2);
+	stopMotor(rightMotor);
 	turnLEDOn(LED);
-	wait(1);
+	wait(3);
 	turnLEDOff(LED);
-	wait(1);
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
 }

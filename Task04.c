@@ -16,12 +16,15 @@
 
 task main()
 {
+	startMotor(leftMotor, 50);
+	untilBump(button);
+	stopMotor(leftMotor);
+	startMotor(rightMotor, 50);
+	wait10Msec(1);
+	untilBump(button);
+	stopMotor(rightMotor);
 	turnLEDOn(LED);
-	wait(1);
+	wait10Msec(1);
+	untilBump(button);
 	turnLEDOff(LED);
-	wait(1);
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
 }
