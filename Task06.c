@@ -16,12 +16,17 @@
 
 task main()
 {
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
+	setServo(servo, 0);
+	startMotor(rightMotor, 50);
+	untilBump(button, 0);
+	stopMotor(rightMotor);
+	wait(2);
+	setServo(servo, 127);
+	wait(2);
+	untilBump(limitSwitch, 0);
+	setServo(servo, 0);
+	wait(2);
+	startMotor(leftMotor, 50);
+	untilRotations(1, rotaryEncoder);
+	stopMotor(leftMotor);
 }

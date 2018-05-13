@@ -16,12 +16,31 @@
 
 task main()
 {
+	startMotor(leftMotor, 50);
+	wait(2);
+	stopMotor(leftMotor);
+	startMotor(rightMotor, 50);
+	wait(2);
+	stopMotor(rightMotor);
 	turnLEDOn(LED);
-	wait(1);
+	wait(3);
 	turnLEDOff(LED);
-	wait(1);
+	startMotor(leftMotor, 50);
+	wait(2);
+	stopMotor(leftMotor);
+	startMotor(rightMotor, 50);
+	wait(2);
+	stopMotor(rightMotor);
 	turnLEDOn(LED);
-	wait(1);
+	wait(3);
 	turnLEDOff(LED);
-	wait(1);
+	startMotor(leftMotor, 50);
+	wait(2);
+	stopMotor(leftMotor);
+	startMotor(rightMotor, 50);
+	wait(2);
+	stopMotor(rightMotor);
+	turnLEDOn(LED);
+	wait(2);
+	turnLEDOff(LED); //2(3) + 7(2) = 20
 }

@@ -14,14 +14,26 @@
 
 //Task 01, Ian Mckibben
 
+void norm() {
+	while(SensorValue[limitSwitch] == 1) {
+		untilDark(600, lightSensor);
+		turnFlashlightOn(flashlight);
+		untilLight(600, lightSensor);
+		turnFlashlightOff(flashlight);
+	}
+}
+
+void Xnorm() {
+	while(true) {
+		untilLight(600, lightSensor);
+		turnFlashlightOn(flashlight);
+		untilDark(600, lightSensor);
+		turnFlashlightOff(flashlight);
+	}
+}
+
+
 task main()
 {
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
-	turnLEDOn(LED);
-	wait(1);
-	turnLEDOff(LED);
-	wait(1);
+	norm();
 }

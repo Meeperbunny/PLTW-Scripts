@@ -14,8 +14,16 @@
 
 //Task 01, Ian Mckibben
 
+
 task main()
 {
 	startMotor(leftMotor, 50);
-	
+	waitUntil(SensorValue[potentiometer] > 1500);
+	stopMotor(leftMotor);
+	startMotor(rightMotor);
+	untilDark(600, lightSensor);
+	stopMotor(rightMotor);
+	turnLEDOn(LED);
+	untilSonarLessThan(6, ultraSound);
+	turnLEDOff(LED);
 }
